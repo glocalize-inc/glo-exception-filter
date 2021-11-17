@@ -11,7 +11,7 @@ import {
 import { BaseExceptionFilter } from '@nestjs/core';
 
 @Catch()
-export class DevOnlyAllExceptionFilter extends BaseExceptionFilter {
+export class AllExceptionWithMessageFilter extends BaseExceptionFilter {
   constructor() {
     Logger.warn(
       '개발 환경용 filter입니다. 실 서비스 환경에서는 AllExceptionFilter를 사용해주세요',
