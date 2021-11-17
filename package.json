@@ -1,5 +1,5 @@
 {
-  "name": "glo-exception-filter",
+  "name": "@glocalize-inc/glo-exception-filter",
   "version": "0.0.1",
   "description": "Glocalize의 NestJS에서 공통으로 사용하는 Global Pipe",
   "author": "yungik@glocalizeinc.com",
