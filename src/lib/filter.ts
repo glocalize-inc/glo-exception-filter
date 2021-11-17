@@ -4,6 +4,7 @@ import {
   Catch,
   ConflictException,
   ForbiddenException,
+  HttpServer,
   InternalServerErrorException,
   Logger,
   NotFoundException,
@@ -12,7 +13,7 @@ import { BaseExceptionFilter } from '@nestjs/core';
 
 @Catch()
 export class AllExceptionWithMessageFilter extends BaseExceptionFilter {
-  constructor() {
+  constructor(applicationRef?: HttpServer) {
     Logger.warn(
       '개발 환경용 filter입니다. 실 서비스 환경에서는 AllExceptionFilter를 사용해주세요',
       'DevOnlyAllExceptionFilter',
