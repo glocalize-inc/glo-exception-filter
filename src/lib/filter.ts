@@ -15,7 +15,7 @@ import { BaseExceptionFilter } from '@nestjs/core';
 export class AllExceptionWithMessageFilter extends BaseExceptionFilter {
   constructor(applicationRef?: HttpServer) {
     Logger.warn(
-      '개발 환경용 filter입니다. 실 서비스 환경에서는 AllExceptionFilter를 사용해주세요',
+      'API 응답 시, 에러 메시지(message)와 에러 이름(name)이 포함됩니다. 보안에 주의하고, 정책에 따라 메시지와 에러 이름을 누락시켜야하는 경우 AllExceptionFilter를 사용해주세요',
       'DevOnlyAllExceptionFilter',
     );
     super();
